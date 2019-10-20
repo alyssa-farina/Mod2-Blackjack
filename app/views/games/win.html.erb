@@ -1,0 +1,48 @@
+<style>
+  body {
+    background-color: powderblue;
+  }
+</style>
+
+<div align = "center">
+<% if session[:turn] >= 1%>
+  <%= render 'dealer_hand' %>
+<%end%>
+</div>
+
+<br><br><br><br><br>
+
+<div align = "center">
+<h1><%= flash[:win] %></h1>
+<h2>YOU WIN $<%= session[:bet].to_i%>!</h2>
+<h2>PLAY AGAIN!</h2>
+</div>
+
+<br><br><br><br><br><br>
+
+<br><br>
+
+<div align = "center">
+<img class="w3-image" src="/assets/streamers.gif" alt="CARDS" width="5600" height="2400">
+<div>
+  <%= @user.name %>
+  user picture
+<%= render 'user_hand' %>
+</div>
+
+<br><br>
+
+<div align = "center">
+ <%= render 'place_bet' %>
+</div>
+ <br>
+
+ <div align = "center">
+Your current funds: <%= @user.funds %>
+</div>
+
+<hr>
+<div align = "center">
+<%= link_to 'Get Up From Table', users_path %>
+</div>
+

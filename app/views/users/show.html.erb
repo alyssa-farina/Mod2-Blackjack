@@ -1,0 +1,105 @@
+<h1>Profile Page for <%= @user.name %></h1>
+<h4> Here are some details about your account </h4>
+<hr>
+<br>
+
+
+<link rel="stylesheet001" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="card">
+ 
+  <h1><%=@user.name %></h1>
+ 
+  
+
+<hr>
+  
+  <h5> Game History </h5>
+  <img class="w3-image" src="/assets/history.gif" alt="CARDS" width="100" height="50">
+  <h3> Game Stats </h3>
+  <h4> Games Played :  <%= @user.games.count %></h4> 
+
+
+
+
+  <hr>
+  
+
+
+ <h5> Funds </h5>
+ <img class="w3-image" src="/assets/money.gif" alt="CARDS" width="60" height="60">
+<img class="w3-image" src="/assets/money.gif" alt="CARDS" width="60" height="60">
+<img class="w3-image" src="/assets/money.gif" alt="CARDS" width="60" height="60">
+ <h2> You currently have $ <%= @user.funds %> to bet </h2>
+
+ 
+ 
+ <hr>
+
+
+
+
+<div>
+<h4> Hi  <%= @user.name %>! If you want to add more money to your funds, just click the button below!<% if flash[:notice] %>
+  <%= flash[:notice] %>
+  <%end %>
+  </div>
+
+<div>
+<%=button_to "Add $20 ", add_funds_path(@user), method: :get%>
+</div>
+<hr>
+
+</div>
+
+<div align = "center">
+
+
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+
+
+</style>
+<body>
+
+<!-- Navbar  -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;" >
+    <a href="/" class="w3-bar-item w3-button">A&A Blackjack Game</a>
+   
+    
+    
+    <div class="w3-right w3-hide-small">
+      <a href="/" class="w3-bar-item w3-button">Welcome Page</a>
+      <a href="/users" class="w3-bar-item w3-button">Menu Page</a>
+     
+  
+    </div>
+  </div>
+</div>
+ </div>
+
+</header>
+
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+

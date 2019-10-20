@@ -1,0 +1,22 @@
+<div>
+  <img src="<%= session[:dealer_hand][0]['cards'][0]['image']%> " />
+  <img src="<%= session[:dealer_hand][1]['cards'][0]['image']%>" />
+      <% if session[:dealer_hand][2] %>
+      <img src="<%= session[:dealer_hand][2]['cards'][0]['image']%>" />
+    <% end %>
+
+    <% if session[:dealer_hand][3] %>
+      <img src="<%= session[:dealer_hand][3]['cards'][0]['image']%>" />
+    <% end %>
+
+    <% if session[:dealer_hand][4] %>
+      <img src="<%= session[:dealer_hand][4]['cards'][0]['image']%>" />
+    <% end %>
+
+    <% if session[:dealer_hand][5] %>
+      <img src="<%= session[:dealer_hand][5]['cards'][0]['image']%>" />
+    <% end %>
+
+  <h4>Dealer Has: <%= session[:dealer_value] %></h4>
+
+</div>

@@ -1,0 +1,48 @@
+<style>
+  body {
+    background-color: #00008B;
+  }
+</style>
+
+<div align = "center">
+<% if session[:turn] >= 1%>
+  <%= render 'dealer_hand' %>
+<%end%>
+</div>
+
+<br><br><br>
+
+<div align = "center">
+<h1>YOU DRAW! $<%= session[:bet].to_i%>!</h1>
+<h2>ATLEAST YOU DIDN'T LOSE!</h2>
+<h2>PLAY AGAIN!</h2>
+</div>
+
+<br><br><br>
+
+<br><br>
+
+
+<div align = "center">
+ 
+
+  <h2><%= @user.name %></h2>
+
+<%= render 'user_hand' %>
+</div>
+
+<br><br>
+
+<div align = "center">
+ <%= render 'place_bet' %>
+</div>
+ <br>
+
+ <div align = "center">
+Your current funds: <%= @user.funds %>
+</div>
+
+<hr>
+<div align = "center">
+<%= link_to 'Get Up From Table', users_path %>
+</div>

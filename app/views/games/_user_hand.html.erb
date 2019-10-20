@@ -1,0 +1,24 @@
+<div>
+
+  <h4> You Have: <%= session[:user_value]%> </h4>
+  <br>
+   <img src="<%= session[:user_hand][0]['cards'][0]['image']%>" width="250" height="300"/>
+   <img src="<%= session[:user_hand][1]['cards'][0]['image']%>"width="250" height="300" />
+    <% if session[:user_hand][2] %>
+      <img src="<%= session[:user_hand][2]['cards'][0]['image']%>"width="250" height="300" />
+    <% end %>
+
+    <% if session[:user_hand][3] %>
+      <img src="<%= session[:user_hand][3]['cards'][0]['image']%>" width="250" height="300" />
+    <% end %>
+
+    <% if session[:user_hand][4] %>
+      <img src="<%= session[:user_hand][4]['cards'][0]['image']%>" width="250" height="300"/>
+    <% end %>
+
+    <% if session[:user_hand][5] %>
+      <img src="<%= session[:user_hand][5]['cards'][0]['image']%>" width="250" height="300"/>
+    <% end %>
+
+
+</div>

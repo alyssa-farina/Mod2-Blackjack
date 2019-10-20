@@ -1,0 +1,34 @@
+
+<div align = "center">
+<% if session[:turn] >= 1%>
+  <%= render 'dealer_hand' %>
+<%end%>
+</div>
+
+<br><br>
+<div align = "center">
+<h1><%= flash[:lose] %></h1>
+<h2>YOU LOSE $<%= session[:bet].to_i%>!</h2>
+<h2>PLAY AGAIN!</h2>
+</div>
+
+
+
+
+<div align = "center">
+  <%= @user.name %>
+<%= render 'user_hand' %>
+</div>
+
+<br><br>
+<div align = "center">
+ <%= render 'place_bet' %>
+</div>
+ <br>
+<div align = "center">
+Your current funds: <%= @user.funds %>
+<center>
+<hr>
+<div align = "center">
+<%= link_to 'Get Up From Table', users_path %>
+</div>

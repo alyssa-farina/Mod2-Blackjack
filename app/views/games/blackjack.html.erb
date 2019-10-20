@@ -1,0 +1,56 @@
+<style>
+  body {
+    background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+  }
+</style>
+
+
+<div align = "center">
+<% if session[:turn] >= 1%>
+  <%= render 'dealer_hand' %>
+<%end%>
+</div>
+
+
+<div align = "left">
+<img  src="/assets/dance.gif" alt="CARDS" width="300" height="200" > 
+</div>
+
+
+
+<div align = "center">
+<h1>BLACKJACK!</h1>
+<h2>YOU WIN $<%= session[:bet].to_i * 1.5%>!</h2>
+<h2>PLAY AGAIN!</h2>
+</div>
+
+<div align = "right">
+<img  src="/assets/dance.gif" alt="CARDS" width="300" height="200" > 
+</div>
+
+
+
+
+<div align = "center">
+  <h2><%= @user.name %></h2>
+ 
+<%= render 'user_hand' %>
+</div>
+
+
+<br><br>
+<div align = "center">
+ <%= render 'place_bet' %>
+</div>
+ <br>
+
+ </div>
+
+ <div align = "center">
+
+Your current funds: <%= @user.funds %>
+ </div>
+<hr>
+ <div align = "center">
+<%= link_to 'Get Up From Table', users_path %>
+</div>

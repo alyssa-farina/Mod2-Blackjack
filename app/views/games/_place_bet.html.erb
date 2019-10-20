@@ -1,0 +1,5 @@
+<%= form_with url: make_bet_path do |form| %>
+  How much would you like to wager? <br>
+  <%= form.text_field :bet %>
+  <%= form.submit 'Place Bet and Deal' %>
+<% end %>

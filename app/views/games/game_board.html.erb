@@ -1,0 +1,93 @@
+<% if flash[:stand] %>
+<%= render 'stand_proccess'%>
+<%end%>
+
+<% if !flash[:stand] %>
+<div>
+<style>
+body {
+  background-image: url("/assets/blackjacktable.jpg");
+
+} 
+
+</style>
+
+<%= audio_tag "", id: "sound" , class: "audio-to-play1", loop: false, autoplay: true %>
+
+
+<!----- DEALER ----->
+<div align = "center">
+</div>
+<div class = "roatate">
+<img  src="/assets/gamechips.png" alt="CARDS" width="300" height="200" > 
+
+<div align = "center"
+<% if session[:turn] >= 1%>
+<img src="https://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-bicycle-rider-back-1_grande.png?v=1535755695" width="217" height="312"/>
+<img src="https://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-bicycle-rider-back-1_grande.png?v=1535755695" width="217" height="312"/>
+  <img src="<%= session[:dealer_hand][1]['cards'][0]['image']%>" />
+<%end%>
+</div>
+
+<br><br><br><br><br>
+
+<div align = "center">
+  <img src="https://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-bicycle-rider-back-1_grande.png?v=1535755695" width="250" height="300"/>
+
+
+  
+ 
+</div>
+
+
+<br>
+<% if session[:turn] >= 1%>
+<%= render 'user_options'%>
+<br>
+
+
+<!----- USER ----->
+<div align= "center">
+  <h2><%= @user.name %></h2>
+  <br>
+
+<%= render 'user_hand' %>
+</div>
+
+
+<%end%>
+
+
+<!--------- Place A Bet ----->
+<% if flash[:notice]%>
+  <%= flash[:notice]%><br><br>
+  <%=button_to "Add Funds ", add_funds_path(@user), method: :get%>
+<%end%>
+
+
+
+<div align = "center">
+<% if session[:turn] <= 0 %>
+  <%= render 'place_bet' %>
+<% end %>
+</div>
+
+
+
+
+<div align = "center">
+<% if session[:bet] != 0 %>
+ <h3> Current Bet: <%= session[:bet] %></h3>
+<% end %>
+</div>
+
+ <hr>	
+
+ <div align = "center">
+ <h3> Your current funds: <%= @user.funds %> </h3>
+ <%= link_to 'Get Up From Table', users_path %>
+<%end%>
+
+
+
+

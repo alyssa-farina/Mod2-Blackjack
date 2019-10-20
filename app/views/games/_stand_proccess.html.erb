@@ -1,0 +1,63 @@
+<style>
+body {
+  background-image: url("/assets/blackjacktable.jpg");
+
+} 
+
+</style>
+
+
+
+<div align = "center"
+<% if session[:turn] >= 1%>
+  <%= render 'dealer_hand' %>
+<%end%>
+</div>
+
+<br><br><br><br><br>
+
+<div align = "center">
+  <img src="https://cdn.shopify.com/s/files/1/0200/7616/products/playing-cards-bicycle-rider-back-1_grande.png?v=1535755695" width="250" height="300"/>
+  <br>
+  Cards remaining: 
+</div>
+
+<br><br><br><br><br><br>
+
+
+
+<br><br>
+
+<% if session[:turn] >= 1%>
+
+<div align = "center">
+  <%= link_to "Next Card", stand_path %>
+</div>
+<!----- USER ----->
+<div align = "center">
+  <h2><%= @user.name %></h2>
+
+<%= render 'user_hand' %>
+</div>
+
+<br><br>
+
+<%end%>
+
+
+
+<div align = "center">
+<% if session[:bet] != 0 %>
+  Current Bet: <%= session[:bet] %>
+<% end %>
+</div>
+
+<br>
+<div align = "center">
+<h3> Your current funds: <%= @user.funds %> </h3>
+</div>
+
+<hr>
+
+
+

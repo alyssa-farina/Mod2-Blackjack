@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+
+
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+
+
+</style>
+<body>
+
+<!-- Navbar  -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;" >
+    <a href="/" class="w3-bar-item w3-button">A&A Blackjack Game</a>
+    
+    <div class="w3-right w3-hide-small">
+      <a href="/" class="w3-bar-item w3-button">Welcome</a>
+      <a href="users/new" class="w3-bar-item w3-button">Sign Up</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+
+<h1> Login In Here </h1>
+
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+  </div>
+
+  </div>
+</header>
+<!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+    
+  
+    <img src="/assets/blackjack1.png" class="img-fluid main-image" style="height:100vh">
+    <br>
+    <br>
+    
+    </div>
+    
+    
+    <div class="w3-col m6 w3-padding-large">
+     
+    <h3><%= flash[:notice] %></h3>
+    
+    <div align="center">
+    <h2> Login In Here </h2>
+<%= form_with url: '/login' do |form| %>
+  <br>
+    <%= form.label  :name %>
+    <%= form.text_field :name %>
+   <br>
+   <br>
+   
+   <%= form.label  :password %>
+   <%= form.password_field :password %>
+   <br>
+   <br>
+    <%= form.submit %>
+   <% end %>
+      
+        </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div align = "center">
+  <img src="/assets/odds.gif" class="img-fluid main-image" >
+</div>
+  
+  
+  
+  
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<!-- End page content -->
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</body>
+</html>
+
+

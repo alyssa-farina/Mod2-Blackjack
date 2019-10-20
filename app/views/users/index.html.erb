@@ -1,0 +1,88 @@
+<h1> Hello! Welcome to A&As Blackjack Game</h1>
+
+<h3><%= flash[:notice] %></h3>
+
+<br>
+<!DOCTYPE html>
+<html>
+
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;" >
+    <a href="/" class="w3-bar-item w3-button">A&A Blackjack Game</a>
+    
+ 
+    <div class="w3-right w3-hide-small">
+      <a href="/" class="w3-bar-item w3-button">Welcome Page</a>
+      <img class="w3-image" src="/assets/ace.gif" alt="CARDS" width="70" height="80">
+      
+      
+    </div>
+  </div>
+</div>
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+ 
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+  
+  </div>
+</header>
+
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+<div align = "center">
+<h2> Below you can choose to start a new game or view your profile </h2>
+
+<hr>
+<br>
+
+<%= link_to "Start New Game" , new_game_board_path(@game) %>
+<br>
+<%= link_to "See Your Profile", user_path(@user) %>
+</div>
+  
+  
+  
+  
+  <hr>
+  
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+<div align = "center">
+<img class="w3-image" src="/assets/suits.png" alt="CARDS" width="800" height="80">
+</div>
