@@ -63,7 +63,7 @@ class UsersController < ApplicationController
     def add_funds
       @user = User.find(params[:id])
       if @user.funds 
-          @user.funds += 20
+          @user.funds += 200
           @user.save
       else
           @user.funds = 5
